@@ -14,7 +14,7 @@ class ProxyItem(scrapy.Item):
     country_code = scrapy.Field()
     country = scrapy.Field()
     city = scrapy.Field()
-    speed = scrapy.Field()
+    response_time = scrapy.Field()
     type = scrapy.Field()
     anonymity = scrapy.Field()
     last_check = scrapy.Field()
