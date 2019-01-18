@@ -10,11 +10,11 @@ import scrapy
 
 class ProxyItem(scrapy.Item):
     ip_address = scrapy.Field()
-    port = scrapy.Field()
+    port_number = scrapy.Field()
     country_code = scrapy.Field()
     country = scrapy.Field()
     city = scrapy.Field()
     response_time = scrapy.Field()
-    type = scrapy.Field()
+    proxy_type = scrapy.Field()
     anonymity = scrapy.Field()
     last_check = scrapy.Field()

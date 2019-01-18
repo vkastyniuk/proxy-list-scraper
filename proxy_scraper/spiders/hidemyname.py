@@ -20,12 +20,12 @@ class HideMyNameSpider(scrapy.Spider):
         for item in response.css('table.proxy__t > tbody > tr'):
             loader = ProxyItemLoader(selector=item)
             loader.add_css('ip_address', 'td:nth-child(1)::text')
-            loader.add_css('port', 'td:nth-child(2)::text')
+            loader.add_css('port_number', 'td:nth-child(2)::text')
             loader.add_css('country_code', 'td:nth-child(3) span:first-child::attr(class)')
             loader.add_css('country', 'td:nth-child(3) div::text')
             loader.add_css('city', 'td:nth-child(3) span:last-child::text')
             loader.add_css('response_time', 'td:nth-child(4) p::text')
-            loader.add_css('type', 'td:nth-child(5)::text')
+            loader.add_css('proxy_type', 'td:nth-child(5)::text')
             loader.add_css('anonymity', 'td:nth-child(6)::text')
             loader.add_css('last_check', 'td:nth-child(7)::text')
 
