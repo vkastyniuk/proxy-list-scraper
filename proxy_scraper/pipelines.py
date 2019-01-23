@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 class DateTimeEncoder(json.JSONEncoder):
     def default(self, o):
         if isinstance(o, (datetime.date, datetime.datetime)):
-            return o.timestamp()
+            return int(round(o.timestamp()))
 
         return json.JSONEncoder.default(self, o)
 
