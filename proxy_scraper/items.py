@@ -4,17 +4,16 @@
 #
 # See documentation in:
 # https://doc.scrapy.org/en/latest/topics/items.html
-
 import scrapy
 
 
 class ProxyItem(scrapy.Item):
     ip_address = scrapy.Field()
     port_number = scrapy.Field()
+    proxy_type = scrapy.Field()
+    response_time = scrapy.Field()
+    last_check = scrapy.Field()
+    anonymity = scrapy.Field()
     country_code = scrapy.Field()
     country = scrapy.Field()
     city = scrapy.Field()
-    response_time = scrapy.Field()
-    proxy_type = scrapy.Field()
-    anonymity = scrapy.Field()
-    last_check = scrapy.Field()
